@@ -37,6 +37,16 @@ body{
 	margin: 30px;
 	position: relative;
 }
+@media screen and (max-width: 600px) {
+ .s-box-container{
+		flex-wrap: wrap;
+		margin-left:10px;
+	}
+	.cn-btn{
+		margin-left:151px;
+	}		
+	
+}
 
 /* tc-Total Confirmed */
 .tc h1{

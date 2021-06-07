@@ -1,0 +1,267 @@
+body{
+	background-color: black;
+	font-family: 'Poppins',sans-serif;
+}
+/* Project page */
+.projects-header{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.services{
+	width:100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.s-box-container{
+	width:100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.s-box{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width:300px;
+	padding: 20px 25px;
+	height: 400px;
+	box-sizing: border-box;
+	margin: 30px;
+	position: relative;
+}
+
+/* tc-Total Confirmed */
+.tc h1{
+	color:red;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.tc h3{
+	color:red;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+.tc p{
+	color: red;
+	text-align: center;
+	opacity: 0.6;
+}
+.tc .bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:red; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.tc:hover{
+	box-shadow: 2px 2px 30px red;
+	transition: all ease 0.3s;
+}
+/* nc-New Confirmed */
+.nc h1{
+	color:#ce1212;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.nc h3{
+	color:#ce1212;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+.nc p{
+	color: #ce1212;
+	text-align: center;
+	opacity: 0.6;
+}
+.nc .bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#ce1212; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.nc:hover{
+	box-shadow: 2px 2px 30px #ce1212;
+	transition: all ease 0.3s;
+}
+/* nd-New Death */
+.nd h1{
+	color:#0d6efd;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.nd h3{
+	color:#0d6efd;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+.nd p{
+	color:#0d6efd;
+	text-align: center;
+	opacity: 0.6;
+}
+.nd .bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#0d6efd; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.nd:hover{
+	box-shadow: 2px 2px 30px #0d6efd;
+	transition: all ease 0.3s;
+}
+
+/* td-Todal Death */
+.td h1{
+	color:#4070F4;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.td h3{
+	color:#4070F4;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+.td p{
+	color:#4070F4;
+	text-align: center;
+	opacity: 0.6;
+}
+.td .bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#4070F4; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.td:hover{
+	box-shadow: 2px 2px 30px #4070F4;
+	transition: all ease 0.3s;
+}
+/* nr-New Recovered */
+.nr h1{
+	color:#198754;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.nr h3{
+	color:#198754;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+.nr p{
+	color:#198754;
+	text-align: center;
+	opacity: 0.6;
+}
+.nr .bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#198754; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.nr:hover{
+	box-shadow: 2px 2px 30px #198754;
+	transition: all ease 0.3s;
+}
+/* tr-Total Recovered */
+.tr h1{
+	color:#228B22;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+}
+.tr h3{
+	color:#228B22;
+	letter-spacing: 1px;
+	margin-bottom: 8px;
+	opacity: 0.7;
+}
+.tr p{
+	color:#228B22;
+	text-align: center;
+	opacity: 0.6;
+}
+.tr .bar{
+	width: 100px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	transform: translateX(-50%);
+	background-color:#228B22; 
+	border-radius: 0px 0px 10px 10px;
+	display: none;
+	animation: bar 0.5s;
+}
+.tr:hover{
+	box-shadow: 2px 2px 30px #228B22;
+	transition: all ease 0.3s;
+}
+
+.s-box:hover .bar{
+	display: block;
+}
+@keyframes bar{
+	0%{
+		width:0px;
+	}
+	100%{
+		width:100px;
+	}
+}
+@media(max-width:1050px){
+	.s-box-container{
+		flex-wrap: wrap;
+		
+	}	
+	.services{
+		height: auto;
+	}
+	.s-heading{
+		margin: 15px;
+	}
+	.s-box{
+		flex-grow: 1;
+	}
+	
+}

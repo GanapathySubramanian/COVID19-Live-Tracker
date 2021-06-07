@@ -19,3 +19,8 @@
 5. After installing all the module(express,ejs,nodemon) use the command node index.js or nodemon to run or start the server.
 6. Open your web browser and type 'localhost:3000'
 7. Hurray! That's it!
+ 
+<img src="https://user-images.githubusercontent.com/60843507/121011519-550eb500-c7b4-11eb-9882-e3e415a09314.PNG">
+<img src="https://user-images.githubusercontent.com/60843507/121011514-54761e80-c7b4-11eb-9c24-2da5e790fe4d.PNG">
+<img src="https://user-images.githubusercontent.com/60843507/121011524-55a74b80-c7b4-11eb-928a-888a12c61d5c.PNG">
+<img src="https://user-images.githubusercontent.com/60843507/121011501-5213c480-c7b4-11eb-97d0-de89910ff650.PNG">

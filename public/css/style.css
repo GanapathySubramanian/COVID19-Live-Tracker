@@ -41,10 +41,10 @@ body{
 @media screen and (max-width: 600px) {
  .s-box-container{
 		flex-wrap: wrap;
-		margin-left:10px;
+		margin-left:6px;
 	}
 	.cn-btn{
-		margin-left:151px;
+		margin-left:140px;
 	}		
 	
 }

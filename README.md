@@ -1,7 +1,5 @@
 # COVID19-Live-Tracker
 
-# My-Portfolio
-
 ## Prerequisites
 1. Install NODE JS using the link https://nodejs.org/en/ 
 2. Any Editor (Preferably VS Code or Brackets Text Editor)

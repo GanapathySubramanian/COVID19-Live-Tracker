@@ -10,8 +10,6 @@
     <!-- =====GOOGLE FONT===== -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
-
     
 </head>
 <body>
@@ -72,9 +70,7 @@
                 <p>Number of New Recovered cases of <br> COVID - 19</p>
             </div>
         </div>
-       <div class="mt-5 mb-5">
-            <canvas id="myChart" width="200" height="200"></canvas>
-        </div>
+
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -100,49 +96,7 @@
             $('#data').empty()
         }
         
-         drawchart();
-        function drawchart(){
-            var url="https://api.covid19api.com/summary"
-            var data = '';
-            $.get(url,(data)=>{
-                const ctx = document.getElementById('myChart').getContext('2d');
-                const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Total_Confirmed', 'Total_Death', 'Total_Recovered', 'New_Confirmed', 'New_Death', 'New_Recovered'],
-                    datasets: [{
-                        label: 'Covid 19 Global cases',
-                        data: [`${data.Global.TotalConfirmed}`, `${data.Global.TotalDeaths}`,`${data.Global.TotalRecovered}`, `${data.Global.NewConfirmed}`,`${data.Global.NewDeaths}`,`${data.Global.NewRecovered}`],
-                        backgroundColor: [
-                            'red',
-                            'blue',
-                            'green',
-                            'rgba(206, 18, 18, 1)',
-                            'rgba(13, 110, 253, 1)',
-                            'rgba(25, 135, 84, 1)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 0, 0, 1)',
-                            'rgba(64, 112, 244, 1)',
-                            'rgba(34, 139, 34, 1)',
-                            'rgba(206, 18, 18, 1)',
-                            'rgba(13, 110, 253, 1)',
-                            'rgba(25, 135, 84, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
-            });
-        }
-    
+       
  
 </script>
 </html>

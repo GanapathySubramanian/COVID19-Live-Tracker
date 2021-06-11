@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 </head>
 <body>
     <div class="container">
@@ -70,7 +72,8 @@
                 <p>Number of New Recovered cases of <br> COVID - 19</p>
             </div>
         </div>
-
+        
+         <canvas id="myChart" width="100" height="100"></canvas>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -95,6 +98,78 @@
         function clearData(){
             $('#data').empty()
         }
+        
+         drawchart();
+        function drawchart(){
+            $.getJSON("https://api.covid19api.com/summary", function (data) {
+        var country = [];
+        var confirmed = [];
+        var n_confirmed = [];
+        var recovered = [];
+        var n_recovered = [];
+        var deaths = [];
+        var n_deaths = [];
+
+
+        $.each(data.Countries, function (id, obj) {
+        country.push(obj.Country);
+        confirmed.push(obj.TotalConfirmed);
+        n_confirmed.push(obj.NewConfirmed);
+        recovered.push(obj.TotalRecovered);
+        n_recovered.push(obj.NewRecovered);
+        deaths.push(obj.TotalDeaths);
+        n_deaths.push(obj.NewDeaths);
+        });
+
+        // Chart initialization
+        var myChart = document.getElementById("myChart").getContext("2d");
+        var chart = new Chart(myChart, {
+        type: "line",
+        data: {
+            labels: country,
+            datasets: [
+            {
+                label: "Total Confirmed Cases",
+                data: confirmed,
+                backgroundColor: "red",
+                minBarLength: 100,
+            },
+            {
+                label: "New Confirmed Cases",
+                data: n_confirmed,
+                backgroundColor: "#ce1212",
+                minBarLength: 100,
+            },
+            {
+                label: "Total Recovered Cases",
+                data: recovered,
+                backgroundColor: "green",
+                minBarLength: 100,
+            },
+            {
+                label: "New Recovered Cases",
+                data: n_recovered,
+                backgroundColor: "#228B22",
+                minBarLength: 100,
+            },
+            {
+                label: "Total Deceased",
+                data: deaths,
+                backgroundColor: "blue",
+                minBarLength: 100,
+            },
+            {
+                label: "New Deceased",
+                data: deaths,
+                backgroundColor: "#4070F4",
+                minBarLength: 100,
+            },
+            ],
+        },
+        option: {},
+        });
+    });
+}
         
        
  

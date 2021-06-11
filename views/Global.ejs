@@ -104,21 +104,15 @@
             $.getJSON("https://api.covid19api.com/summary", function (data) {
         var country = [];
         var confirmed = [];
-        var n_confirmed = [];
         var recovered = [];
-        var n_recovered = [];
         var deaths = [];
-        var n_deaths = [];
 
 
         $.each(data.Countries, function (id, obj) {
         country.push(obj.Country);
         confirmed.push(obj.TotalConfirmed);
-        n_confirmed.push(obj.NewConfirmed);
         recovered.push(obj.TotalRecovered);
-        n_recovered.push(obj.NewRecovered);
         deaths.push(obj.TotalDeaths);
-        n_deaths.push(obj.NewDeaths);
         });
 
         // Chart initialization
@@ -134,36 +128,21 @@
                 backgroundColor: "red",
                 minBarLength: 100,
             },
-            {
-                label: "New Confirmed Cases",
-                data: n_confirmed,
-                backgroundColor: "#ce1212",
-                minBarLength: 100,
-            },
+
             {
                 label: "Total Recovered Cases",
                 data: recovered,
                 backgroundColor: "green",
                 minBarLength: 100,
             },
-            {
-                label: "New Recovered Cases",
-                data: n_recovered,
-                backgroundColor: "#228B22",
-                minBarLength: 100,
-            },
+
             {
                 label: "Total Deceased",
                 data: deaths,
                 backgroundColor: "blue",
                 minBarLength: 100,
             },
-            {
-                label: "New Deceased",
-                data: deaths,
-                backgroundColor: "#4070F4",
-                minBarLength: 100,
-            },
+
             ],
         },
         option: {},

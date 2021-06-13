@@ -26,7 +26,6 @@
                         <a href="/country" class="btn btn-primary btn-block cn-btn">search by country</a>
                 </div>
             </div>
-            <?php include('../c_dashboard.php');?>
         </div>
 
 
@@ -99,7 +98,7 @@
             $('#data').empty()
         }
         
-         drawchart();
+        drawchart();
         function drawchart(){
             $.getJSON("https://api.covid19api.com/summary", function (data) {
         var country = [];

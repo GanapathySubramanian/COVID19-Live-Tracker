@@ -8,7 +8,7 @@ Visit : [Live demo](https://ganapathydacovid19-livetracker.herokuapp.com/)
 ## Languages and Technologies used
 1. HTML5/CSS3
 2. Node js
-3. Express is
+3. Express js
 4. ejs(view engine)
 
 ## Steps to run the project in your machine
